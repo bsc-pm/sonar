@@ -23,7 +23,8 @@ pkginclude_HEADERS =
 c_api_sources = \
  src/c/Operations.cpp
 
-fortran_api_sources =
+fortran_api_sources = \
+ src/fortran/Operations.cpp
 
 common_sources = \
  src/common/Instrument.cpp \

@@ -8,6 +8,15 @@ library.
 [ovni docs]: https://ovni.readthedocs.io/
 [mpi]: https://www.mpi-forum.org
 
+## Licensing
+
+The code of Sonar libraries is lincensed under the clauses of the MIT license
+included in the [COPYING](COPYING) file. The copyright of the files of this
+project belongs to the Barcelona Supercomputing Center (BSC), unless otherwise
+explicitly stated.
+
+## Supported models
+
 Currently the Sonar project only supports the instrumentation of the [MPI][mpi]
 programming model through the `libsonar-mpi.so` library. The following MPI
 operations are instrumented:
@@ -22,17 +31,13 @@ operations are instrumented:
 * *Wait*, *Waitall*, *Waitany* and *Waitsome*
 * *Test*, *Testall*, *Testany* and *Testsome*
 
-Notice that all the existing **blocking**, **non-blocking** and **large count**
-variants of the previous operations are instrumented. For instance, in the case
-of the send primitive, all the `MPI_Send`, `MPI_Isend`, `MPI_Send_c` and
-`MPI_Isend_c` are instrumented.
+All the existing **blocking**, **non-blocking** and **large count** variants of
+the previous operations are instrumented. For instance, in the case of the send
+primitive, all the `MPI_Send`, `MPI_Isend`, `MPI_Send_c` and `MPI_Isend_c` are
+instrumented.
 
-## Licensing
-
-The code of Sonar libraries is lincensed under the clauses of the MIT license
-included in the [COPYING](COPYING) file. The copyright of the files of this
-project belongs to the Barcelona Supercomputing Center (BSC), unless otherwise
-explicitly stated.
+:warning: The support for Fortan interfaces is limited. All the operations above
+are instrumented except the large count variants.
 
 ## Building
 
