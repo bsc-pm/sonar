@@ -131,6 +131,12 @@ private:
         ovni_ev_emit(&ev);
     }
 
+    //! \brief Check the run-time and compiled ovni versions are compatible
+    static void ovniCheck()
+    {
+        ovni_version_check();
+    }
+
     //! \brief Initialize the ovni instrumentation
     static void ovniInitialize()
     {
@@ -212,6 +218,9 @@ public:
     {
         // Perform a safety check
         checkStateTableCorrectness();
+
+        // Check the ovni version
+        ovniCheck();
 
         Envar<std::string> instrument("SONAR_MPI_INSTRUMENT", "none");
         if (instrument.get() == "ovni")
