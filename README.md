@@ -46,7 +46,7 @@ To build Sonar, the following software must be available:
 1. A C++ compiler supporting C++17 standard
 1. The automake, autoconf, libtool, and make commands
 1. An MPI implementation
-1. The [ovni][ovni] instrumentation library
+1. The [ovni][ovni] instrumentation library (1.3.0 or later)
 
 When cloning from the repository, the building environment must be prepared
 through the command below. When the code is distributed through a tarball,
